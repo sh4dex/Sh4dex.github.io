@@ -1,6 +1,5 @@
 ---
 permalink: /
-title: "Hi there 👋 I'm Sh4dEx"
 author_profile: true
 redirect_from: 
   - /about/
