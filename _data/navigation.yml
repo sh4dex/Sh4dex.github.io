@@ -1,32 +1,33 @@
-# main links links
+# The following is the order of the links in the header of the website.
+#
+# Changing the order here will adjust the order and you can also add additional
+# links. Removing a link prevents it from showing in the header, but does not
+# prevent it from being included in the site.
+#
+# NOTE that only one of the CV options should be selected, the first is for the
+#      Markdown formatted page while the second is generated using JSON.
+
 main:
+  # - title: "Publications"
+  #   url: /publications/
 
-  - title: "Home"
-    url: //
+  - title: "Talks"
+    url: /talks/
 
-    #TODO: activate
-    #- title: "CV"
-    #url: /cv/
+  # - title: "Teaching"
+  #   url: /teaching/
 
-  - title: "Blog Posts"
-    url: /year-archive/
+  # - title: "Portfolio"
+  #   url: /portfolio/
 
-  - title: "Publications"
-    url: /publications/
+  # - title: "Blog Posts"
+  #   url: /year-archive/
 
-    #TODO: activate
-    #- title: "Search"
-    #url: /search/
+  - title: "CV"
+    url: /cv/
 
-    #- title: "Talks"
-    #url: /talks/
+  # - title: "CV"
+  #   url: /cv-json/
 
-    #- title: "Portfolio"
-    #url: /portfolio/
-
-    #- title: "Guide"
-    #url: /markdown/
-
-    #- title: "Guide"
-   #url: /markdown/
-
+  # - title: "Guide"
+  #   url: /markdown/
