@@ -23,7 +23,7 @@ repository               : "sh4dex/sh4dex.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "page/profile.png"
   name             : "Thomas Sorza"
   pronouns         : # example: "she/her"  
   bio              : "Blockchain Developer | Security Researcher"

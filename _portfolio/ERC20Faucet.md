@@ -1,6 +1,6 @@
 ---
 title: "ERC20 Faucet"
-excerpt: "Time-driven ERC20 token faucet implementation. Periodical token claims with cooldown and max claim limits.<br/><img src='/images/erc20-faucet-cover.png'>"
+excerpt: "Time-driven ERC20 token faucet implementation. Periodical token claims with cooldown and max claim limits.<br/><img src='/images/projects/erc20-faucet-cover.png'>"
 collection: portfolio
 ---
 
@@ -23,7 +23,7 @@ Deployment script: `script/DeployTHXToken.s.sol`
 
 ## claim() Execution Flow
 
-![Execution Flow](/images/executionFlow.png)
+![Execution Flow](/images/projects/executionFlow.png)
 
 1. Check `block.timestamp - _lastClaim ≥ cooldown`
 2. Check `balanceOf(this) ≥ _dripAmount`
