@@ -1,6 +1,9 @@
 ---
 title: "CryptoBank"
-excerpt: "Solidity Ether bank contract with deposit, withdrawal, and peer-to-peer transfer. Reentrancy-protected with owner-configurable deposit limits and on-chain event logging.<br/><img src='/images/projects/CryptoBank.sol.png'>"
+excerpt: "Solidity Ether bank contract with deposit, withdrawal, and peer-to-peer transfer. Reentrancy-protected with owner-configurable deposit limits and on-chain event logging."
+tagline: "Solidity Ether bank contract with deposit, withdrawal, and peer-to-peer transfer. Reentrancy-protected with owner-configurable deposit limits."
+image: /images/projects/CryptoBank.sol.png
+github: https://github.com/sh4dex/CryptoBank
 collection: portfolio
 ---
 

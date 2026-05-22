@@ -1,6 +1,9 @@
 ---
 title: "CalculatorWeb3"
-excerpt: "Solidity smart contract calculator with addition, subtraction, multiplication, division and power functions. Owner-restricted operations with on-chain event logging.<br/><img src='/images/projects/calculator.png'>"
+excerpt: "Solidity smart contract calculator with addition, subtraction, multiplication, division and power functions. Owner-restricted operations with on-chain event logging."
+tagline: "Solidity smart contract calculator with addition, subtraction, multiplication, division and power. Owner-restricted operations with on-chain event logging."
+image: /images/projects/calculator.png
+github: https://github.com/sh4dex/CalculatorWeb3
 collection: portfolio
 ---
 

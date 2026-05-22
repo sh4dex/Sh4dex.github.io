@@ -1,6 +1,9 @@
 ---
 title: "ERC20 Faucet"
-excerpt: "Time-driven ERC20 token faucet implementation. Periodical token claims with cooldown and max claim limits.<br/><img src='/images/projects/erc20-faucet-cover.png'>"
+excerpt: "Time-driven ERC20 token faucet implementation. Periodical token claims with cooldown and max claim limits."
+tagline: "Time-driven ERC20 token faucet. Periodic token claims with cooldown enforcement and max claim limits. Deployed on Arbitrum Sepolia."
+image: /images/projects/erc20-faucet-cover.png
+github: https://github.com/sh4dex/ERC20-faucet
 collection: portfolio
 ---
 

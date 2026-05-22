@@ -1,6 +1,11 @@
 ---
 title: "NeuralHook"
-excerpt: "AI-powered impermanent loss protection for Uniswap v4 LPs — live on Unichain Sepolia.<br/><img src='/images/projects/neuralhook-cover.png'>"
+excerpt: "AI-powered impermanent loss protection for Uniswap v4 LPs — live on Unichain Sepolia."
+tagline: "AI-powered impermanent loss protection for Uniswap v4 LPs. Three-node agent network predicts risk and autonomously adjusts pool fees. Live on Unichain Sepolia."
+image: /images/projects/neuralhook-cover.png
+github: https://github.com/Hijanhv/NeuralHook/tree/main
+demo: https://neural-hook.vercel.app/
+showcase: https://ethglobal.com/showcase/neuralhook-8gxzp
 collection: portfolio
 ---
 

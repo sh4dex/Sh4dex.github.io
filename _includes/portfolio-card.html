@@ -1,0 +1,32 @@
+{% include base_path %}
+
+<div class="portfolio-card">
+  <a href="{{ base_path }}{{ post.url }}" class="portfolio-card__image-link" aria-label="{{ post.title }}">
+    <div class="portfolio-card__image">
+      <img src="{{ post.image | prepend: base_path }}" alt="{{ post.title }} cover">
+    </div>
+  </a>
+  <div class="portfolio-card__body">
+    <a href="{{ base_path }}{{ post.url }}" class="portfolio-card__title">{{ post.title }}</a>
+    {% if post.tagline %}
+      <p class="portfolio-card__tagline">{{ post.tagline }}</p>
+    {% endif %}
+    <div class="portfolio-card__actions">
+      {% if post.github %}
+        <a href="{{ post.github }}" class="portfolio-card__btn portfolio-card__btn--github" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      {% endif %}
+      {% if post.demo %}
+        <a href="{{ post.demo }}" class="portfolio-card__btn portfolio-card__btn--demo" target="_blank" rel="noopener">
+          <i class="fas fa-rocket"></i> Demo
+        </a>
+      {% endif %}
+      {% if post.showcase %}
+        <a href="{{ post.showcase }}" class="portfolio-card__btn portfolio-card__btn--showcase" target="_blank" rel="noopener">
+          <i class="fas fa-trophy"></i> Showcase
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
