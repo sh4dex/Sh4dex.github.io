@@ -18,6 +18,21 @@ author_profile: true
   <a href="https://www.linkedin.com/feed/update/urn:li:activity:7316466995804205056/?originalSubdomain=es" target="_blank" class="btn btn--primary btn--small">View on LinkedIn</a>
 </div>
 
+<div class="achievement-card">
+  <div class="achievement-header">
+    <span class="achievement-badge">1st Place</span>
+    <span class="achievement-year">May 15, 2026</span>
+  </div>
+  <h3> Alumni Hackathon celebrating the 30th anniversary of the School of Systems Engineering at UPTC</h3>
+  <p class="achievement-org">Universidad pedagógica y tecnológica de Colombia · Tunja, Colombia</p>
+  <p>First place at the Alumni Hackathon celebrating the 30th anniversary of the School of Systems Engineering at UPTC, recognized for Outstanding Design and Functionality. We built our own dating where users can only use Emojis app using WebSockets.<br>
+  <strong>Won: Best Desing, Best complexity for project</strong> 
+  </p>
+  
+  <p></p>
+  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7464604936803250179/" target="_blank" class="btn btn--primary btn--small">View on LinkedIn</a>
+</div>
+
 <style>
 .achievement-card {
   border: 1px solid #e0e0e0;
