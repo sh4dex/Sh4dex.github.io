@@ -1,15 +1,19 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: ""
 permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+{% include base_path %}
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
-
-{% endif %}
+<div class="pf-sec-head">
+  <div>
+    <div class="pf-sec-tag">PUBLIC SPEAKING</div>
+    <h2 class="pf-heading">Talks & Presentations</h2>
+  </div>
+  <p class="pf-lead">Conferences and congresses where I've presented research and projects.</p>
+</div>
 
 {% for post in site.talks reversed %}
   {% include archive-single-talk.html %}

@@ -1,11 +1,19 @@
 ---
-layout: single
+layout: archive
 permalink: /achievements/
-title: "Achievements"
+title: ""
 author_profile: true
 ---
 
-## Competitions & Awards
+{% include base_path %}
+
+<div class="pf-sec-head">
+  <div>
+    <div class="pf-sec-tag">RECOGNITION</div>
+    <h2 class="pf-heading">Achievements</h2>
+  </div>
+  <p class="pf-lead">Competitions, hackathons, and congresses where hard work paid off.</p>
+</div>
 
 <div class="achievement-card">
   <div class="achievement-header">

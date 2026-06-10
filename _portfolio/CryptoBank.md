@@ -5,6 +5,8 @@ tagline: "Solidity Ether bank contract with deposit, withdrawal, and peer-to-pee
 image: /images/projects/CryptoBank.sol.png
 github: https://github.com/sh4dex/CryptoBank
 collection: portfolio
+badge: "BLOCKCHAIN"
+tech_tags: [Solidity, Foundry, OpenZeppelin, ReentrancyGuard]
 ---
 
 <a href="https://github.com/sh4dex/CryptoBank" class="btn btn--inverse btn--large" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>

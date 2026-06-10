@@ -1,32 +1,62 @@
 {% include base_path %}
 
-<div class="portfolio-card">
-  <a href="{{ base_path }}{{ post.url }}" class="portfolio-card__image-link" aria-label="{{ post.title }}">
-    <div class="portfolio-card__image">
-      <img src="{{ post.image | prepend: base_path }}" alt="{{ post.title }} cover">
+{% assign card_num = forloop.index | prepend: "0" | slice: -2, 2 %}
+{% assign tags_str = post.tech_tags | join: "," %}
+
+<article class="pf-card"
+  data-badge="{{ post.badge | downcase }}"
+  data-title="{{ post.title | downcase }}"
+  data-desc="{{ post.tagline | downcase }}"
+  data-tags="{{ tags_str | downcase }}">
+
+  <a href="{{ base_path }}{{ post.url }}" class="pf-card__shot-link" aria-label="{{ post.title }}">
+    <div class="pf-card__shot">
+      {% if post.image %}
+        <img class="pf-card__img" src="{{ post.image | prepend: base_path }}" alt="{{ post.title }}" />
+      {% endif %}
+      <div class="pf-card__glow"></div>
+      {% if post.badge %}
+        <div class="pf-card__badge">{{ post.badge }}</div>
+      {% endif %}
+      <div class="pf-card__num">{{ card_num }}</div>
     </div>
   </a>
-  <div class="portfolio-card__body">
-    <a href="{{ base_path }}{{ post.url }}" class="portfolio-card__title">{{ post.title }}</a>
+
+  <div class="pf-card__body">
+    <h3 class="pf-card__title">
+      <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+    </h3>
     {% if post.tagline %}
-      <p class="portfolio-card__tagline">{{ post.tagline }}</p>
+      <p class="pf-card__desc">{{ post.tagline }}</p>
     {% endif %}
-    <div class="portfolio-card__actions">
+
+    {% if post.tech_tags %}
+      <div class="pf-tags">
+        {% for tag in post.tech_tags %}
+          <span class="pf-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="pf-card__foot">
       {% if post.github %}
-        <a href="{{ post.github }}" class="portfolio-card__btn portfolio-card__btn--github" target="_blank" rel="noopener">
-          <i class="fab fa-github"></i> GitHub
+        <a href="{{ post.github }}" class="pf-lnk" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>
+          View Code
         </a>
       {% endif %}
       {% if post.demo %}
-        <a href="{{ post.demo }}" class="portfolio-card__btn portfolio-card__btn--demo" target="_blank" rel="noopener">
-          <i class="fas fa-rocket"></i> Demo
+        <a href="{{ post.demo }}" class="pf-lnk" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14 21 3M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
+          Live Demo
         </a>
       {% endif %}
       {% if post.showcase %}
-        <a href="{{ post.showcase }}" class="portfolio-card__btn portfolio-card__btn--showcase" target="_blank" rel="noopener">
-          <i class="fas fa-trophy"></i> Showcase
+        <a href="{{ post.showcase }}" class="pf-lnk" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Showcase
         </a>
       {% endif %}
     </div>
   </div>
-</div>
+</article>

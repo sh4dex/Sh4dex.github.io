@@ -1,14 +1,109 @@
 ---
 layout: archive
-title: "Portfolio"
+title: ""
 permalink: /portfolio/
 author_profile: true
 ---
 
 {% include base_path %}
 
-<div class="portfolio__grid">
-  {% for post in site.portfolio %}
-    {% include portfolio-card.html %}
+<div class="pf-sec-head">
+  <div>
+    <div class="pf-sec-tag">SELECTED WORK</div>
+    <h2 class="pf-heading">My Projects</h2>
+  </div>
+  <p class="pf-lead">Smart contracts and blockchain protocols — designed, tested, and deployed end-to-end.</p>
+</div>
+
+<!-- search + filters -->
+<div class="pf-controls">
+  <div class="pf-search-wrap">
+    <svg class="pf-search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input id="pf-search" class="pf-search" type="search" placeholder="Search projects, tags…" autocomplete="off" />
+    <button class="pf-search-clear" id="pf-search-clear" aria-label="Clear search" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="pf-filters" id="pf-filters"></div>
+</div>
+
+<div class="portfolio__grid" id="projGrid">
+  {% assign sorted = site.portfolio | sort: 'date' | reverse %}
+  {% for post in sorted %}
+    {% assign loop_index = forloop.index %}
+    {% include portfolio-card.html index=loop_index %}
   {% endfor %}
 </div>
+
+<script>
+(function () {
+  var grid      = document.getElementById('projGrid');
+  var search    = document.getElementById('pf-search');
+  var clearBtn  = document.getElementById('pf-search-clear');
+  var filtersEl = document.getElementById('pf-filters');
+  var cards     = Array.from(grid.querySelectorAll('.pf-card'));
+
+  /* ── build tag map from data-tags ── */
+  var tagMap = {}; // tag → count
+  cards.forEach(function(c) {
+    var tags = (c.dataset.tags || '').split(',').map(function(t){ return t.trim(); }).filter(Boolean);
+    tags.forEach(function(t) {
+      tagMap[t] = (tagMap[t] || 0) + 1;
+    });
+  });
+
+  /* ── render filter pills ── */
+  var activeCat = 'all';
+
+  function makePill(label, count, key) {
+    var btn = document.createElement('button');
+    btn.className = 'pf-filter-pill' + (key === 'all' ? ' pf-filter-pill--active' : '');
+    btn.dataset.cat = key;
+    btn.innerHTML = label + '<span class="pf-filter-count">' + count + '</span>';
+    btn.addEventListener('click', function() {
+      activeCat = key;
+      document.querySelectorAll('.pf-filter-pill').forEach(function(p) {
+        p.classList.toggle('pf-filter-pill--active', p.dataset.cat === activeCat);
+      });
+      applyFilters();
+    });
+    return btn;
+  }
+
+  filtersEl.appendChild(makePill('All', cards.length, 'all'));
+
+  /* sort tags by count desc, then alphabetically */
+  Object.keys(tagMap)
+    .sort(function(a, b) { return tagMap[b] - tagMap[a] || a.localeCompare(b); })
+    .forEach(function(tag) {
+      filtersEl.appendChild(makePill(tag, tagMap[tag], tag));
+    });
+
+  /* ── filter logic ── */
+  function applyFilters() {
+    var q = search.value.toLowerCase().trim();
+
+    cards.forEach(function(card) {
+      var cardTags = (card.dataset.tags || '').split(',').map(function(t){ return t.trim(); });
+      var matchCat = activeCat === 'all' || cardTags.indexOf(activeCat) !== -1;
+      var matchQ   = !q ||
+        card.dataset.title.includes(q) ||
+        card.dataset.desc.includes(q)  ||
+        card.dataset.tags.includes(q)  ||
+        card.dataset.badge.includes(q);
+
+      card.style.display = (matchCat && matchQ) ? '' : 'none';
+    });
+
+    clearBtn.hidden = !q;
+  }
+
+  search.addEventListener('input', applyFilters);
+
+  clearBtn.addEventListener('click', function() {
+    search.value = '';
+    applyFilters();
+    search.focus();
+  });
+})();
+</script>

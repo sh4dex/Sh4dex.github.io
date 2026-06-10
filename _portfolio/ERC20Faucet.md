@@ -5,6 +5,8 @@ tagline: "Time-driven ERC20 token faucet. Periodic token claims with cooldown en
 image: /images/projects/erc20-faucet-cover.png
 github: https://github.com/sh4dex/ERC20-faucet
 collection: portfolio
+badge: "DEFI"
+tech_tags: [Solidity, Foundry, OpenZeppelin, ERC-20, Arbitrum]
 ---
 
 <a href="https://github.com/sh4dex/ERC20-faucet" class="btn btn--inverse btn--large" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>

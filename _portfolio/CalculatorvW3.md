@@ -5,6 +5,8 @@ tagline: "Solidity smart contract calculator with addition, subtraction, multipl
 image: /images/projects/calculator.png
 github: https://github.com/sh4dex/CalculatorWeb3
 collection: portfolio
+badge: "SOLIDITY"
+tech_tags: [Solidity, Foundry]
 ---
 
 <a href="https://github.com/sh4dex/CalculatorWeb3" class="btn btn--inverse btn--large" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>

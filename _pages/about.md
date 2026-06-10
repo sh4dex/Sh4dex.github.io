@@ -1,13 +1,22 @@
 ---
 permalink: /
-title: "Thomas Sorza — Blockchain Developer & Security Researcher"
+layout: archive
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-## About Me
+{% include base_path %}
+
+<div class="pf-sec-head">
+  <div>
+    <div class="pf-sec-tag">WHO I AM</div>
+    <h2 class="pf-heading">About Me</h2>
+  </div>
+  <p class="pf-lead">Blockchain Developer & Security Researcher building trustless protocols on EVM chains.</p>
+</div>
 
 I'm **Thomas Sorza (Sh4dEx)**, a Blockchain Developer and Security Researcher with a strong focus on **smart contract development and auditing**. I'm currently pursuing a degree in **Systems Engineering and Computer Science** at [UPTC](https://www.uptc.edu.co) (Universidad Pedagógica y Tecnológica de Colombia).
 

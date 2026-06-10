@@ -5,6 +5,8 @@ tagline: "Trustless NFT marketplace in Solidity. List, buy, or cancel any ERC-72
 image: /images/projects/nft-collection-cover.png
 github: https://github.com/sh4dex/NFT-Collection
 collection: portfolio
+badge: "WEB3"
+tech_tags: [Solidity, Foundry, OpenZeppelin, ERC-721, ReentrancyGuard]
 ---
 
 <a href="https://github.com/sh4dex/NFT-Collection" class="btn btn--inverse btn--large" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
