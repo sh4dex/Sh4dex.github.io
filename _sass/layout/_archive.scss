@@ -652,3 +652,361 @@ $pf-r:         18px;
     color: $pf-red-br !important;
   }
 }
+
+
+/* ==========================================================================
+   ACHIEVEMENTS — timeline cards
+   ========================================================================== */
+
+$ach-gold:        #ffce4d;
+$ach-gold-deep:   #e0a92b;
+$ach-gold-glow:   rgba(255,206,77,0.55);
+
+$ach-blue:        #60A5FA;
+$ach-blue-deep:   #2563EB;
+$ach-blue-glow:   rgba(96,165,250,0.55);
+
+$ach-orange:      #FB923C;
+$ach-orange-deep: #EA580C;
+$ach-orange-glow: rgba(251,146,60,0.55);
+
+.pf-ach-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pf-ach {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 28px;
+  align-items: start;
+  background: $pf-surface;
+  border: 1px solid $pf-line;
+  border-radius: $pf-r;
+  padding: 28px 30px;
+  overflow: hidden;
+  transition: transform .35s $pf-ease, border-color .35s $pf-ease, box-shadow .35s $pf-ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: $pf-r 0 0 $pf-r;
+    background: $pf-red;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .4s $pf-ease;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $pf-line2;
+    box-shadow: 0 22px 50px -24px rgba(0,0,0,.55);
+
+    &::before { transform: scaleY(1); }
+  }
+
+  @media (max-width: 760px) {
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    padding: 24px;
+  }
+}
+
+/* ── medal container ─────────────────────────────────────────────── */
+.pf-ach__medal {
+  width: 74px;
+  height: 74px;
+  border-radius: 16px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  position: relative;
+  background: radial-gradient(circle at 30% 25%, $pf-red-tint, transparent 70%), darken($pf-surface, 6%);
+  border: 1px solid $pf-red-line;
+
+  svg {
+    width: 36px;
+    height: 36px;
+    color: $pf-red-br;
+  }
+
+  /* ── gold — 1st place (trophy + gold bloom) ─────── */
+  &--gold {
+    background: radial-gradient(circle at 32% 24%, rgba(255,206,77,0.32), transparent 72%), darken($pf-surface, 6%);
+    border-color: $ach-gold;
+    box-shadow:
+      0 0 0 1px rgba(255,206,77,0.25),
+      0 0 26px -2px $ach-gold-glow,
+      0 0 60px -6px $ach-gold-glow;
+
+    svg {
+      color: $ach-gold;
+      filter: drop-shadow(0 0 9px $ach-gold-glow) drop-shadow(0 0 18px $ach-gold-glow);
+    }
+
+    .pf-ach__rank {
+      background: linear-gradient(180deg, $ach-gold, $ach-gold-deep);
+      color: #3a2a02;
+      box-shadow: 0 4px 16px -3px $ach-gold-glow;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 18px;
+      background: radial-gradient(circle, $ach-gold-glow, transparent 70%);
+      opacity: .55;
+      filter: blur(7px);
+      z-index: -1;
+      animation: pf-bloom-gold 3.2s ease-in-out infinite;
+    }
+  }
+
+  /* ── blue — 2nd place (diamond + blue bloom) ────── */
+  &--blue {
+    background: radial-gradient(circle at 32% 24%, rgba(96,165,250,0.28), transparent 72%), darken($pf-surface, 6%);
+    border-color: $ach-blue;
+    box-shadow:
+      0 0 0 1px rgba(96,165,250,0.25),
+      0 0 26px -2px $ach-blue-glow,
+      0 0 60px -6px $ach-blue-glow;
+
+    svg {
+      color: $ach-blue;
+      filter: drop-shadow(0 0 9px $ach-blue-glow) drop-shadow(0 0 18px $ach-blue-glow);
+    }
+
+    .pf-ach__rank {
+      background: linear-gradient(180deg, $ach-blue, $ach-blue-deep);
+      color: #fff;
+      box-shadow: 0 4px 16px -3px $ach-blue-glow;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 18px;
+      background: radial-gradient(circle, $ach-blue-glow, transparent 70%);
+      opacity: .5;
+      filter: blur(7px);
+      z-index: -1;
+      animation: pf-bloom-blue 3.2s ease-in-out infinite;
+    }
+  }
+
+  /* ── orange — 3rd place (medal + orange bloom) ──── */
+  &--orange {
+    background: radial-gradient(circle at 32% 24%, rgba(251,146,60,0.28), transparent 72%), darken($pf-surface, 6%);
+    border-color: $ach-orange;
+    box-shadow:
+      0 0 0 1px rgba(251,146,60,0.25),
+      0 0 26px -2px $ach-orange-glow,
+      0 0 60px -6px $ach-orange-glow;
+
+    svg {
+      color: $ach-orange;
+      filter: drop-shadow(0 0 9px $ach-orange-glow) drop-shadow(0 0 18px $ach-orange-glow);
+    }
+
+    .pf-ach__rank {
+      background: linear-gradient(180deg, $ach-orange, $ach-orange-deep);
+      color: #fff;
+      box-shadow: 0 4px 16px -3px $ach-orange-glow;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 18px;
+      background: radial-gradient(circle, $ach-orange-glow, transparent 70%);
+      opacity: .5;
+      filter: blur(7px);
+      z-index: -1;
+      animation: pf-bloom-orange 3.2s ease-in-out infinite;
+    }
+  }
+}
+
+.pf-ach__rank {
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: #fff;
+  background: $pf-red;
+  padding: 3px 9px;
+  border-radius: 100px;
+  box-shadow: 0 4px 12px -4px $pf-red-glow;
+}
+
+@keyframes pf-bloom-gold   { 0%,100%{opacity:.4;transform:scale(1)} 50%{opacity:.8;transform:scale(1.08)} }
+@keyframes pf-bloom-blue   { 0%,100%{opacity:.35;transform:scale(1)} 50%{opacity:.75;transform:scale(1.08)} }
+@keyframes pf-bloom-orange { 0%,100%{opacity:.35;transform:scale(1)} 50%{opacity:.75;transform:scale(1.08)} }
+
+@media (prefers-reduced-motion: reduce) {
+  .pf-ach__medal--gold::after,
+  .pf-ach__medal--blue::after,
+  .pf-ach__medal--orange::after { animation: none; }
+}
+
+/* ── content ─────────────────────────────────────────────────────── */
+.pf-ach__main { min-width: 0; }
+
+.pf-ach__date {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12.5px;
+  letter-spacing: .04em;
+  color: $pf-red-br;
+  margin-bottom: 8px;
+}
+
+.pf-ach__title {
+  font-family: "Space Grotesk", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 21px !important;
+  line-height: 1.22 !important;
+  letter-spacing: -.015em !important;
+  margin: 0 0 8px !important;
+  color: $pf-ink !important;
+  border: none !important;
+}
+
+.pf-ach__org {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  font-size: 14px;
+  color: $pf-ink;
+  font-weight: 600;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.pf-ach__pin {
+  width: 15px;
+  height: 15px;
+  color: $pf-red-br;
+  flex-shrink: 0;
+  transform: translateY(2px);
+}
+
+.pf-ach__loc {
+  color: $pf-ink-dim;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.pf-ach__body {
+  color: $pf-ink-mut;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* ── awards row ──────────────────────────────────────────────────── */
+.pf-ach__awards-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.pf-ach__awards-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: $ach-gold;
+}
+
+.pf-ach__awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.pf-award {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  color: #3a2a02;
+  background: linear-gradient(180deg, $ach-gold, $ach-gold-deep);
+  border: 1px solid rgba(255,255,255,.25);
+  padding: 6px 13px;
+  border-radius: 100px;
+  box-shadow: 0 4px 16px -5px $ach-gold-glow, inset 0 1px 0 rgba(255,255,255,.4);
+  transition: transform .25s $pf-ease, box-shadow .25s $pf-ease;
+
+  svg {
+    width: 13px;
+    height: 13px;
+    color: #3a2a02;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px -5px $ach-gold-glow, inset 0 1px 0 rgba(255,255,255,.4);
+  }
+}
+
+/* ── side (LinkedIn link) ────────────────────────────────────────── */
+.pf-ach__side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  flex-shrink: 0;
+
+  @media (max-width: 760px) {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 8px;
+    border-top: 1px solid $pf-line;
+    margin-top: 4px;
+  }
+}
+
+.pf-ach__lnk {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: $pf-ink-mut !important;
+  text-decoration: none !important;
+  transition: color .25s $pf-ease;
+
+  svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+  &:hover { color: $pf-red-br !important; }
+}
