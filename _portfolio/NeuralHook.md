@@ -8,7 +8,7 @@ demo: https://neural-hook.vercel.app/
 showcase: https://ethglobal.com/showcase/neuralhook-8gxzp
 collection: portfolio
 badge: "AI + WEB3"
-tech_tags: [Solidity, Uniswap v4, AI Agents, Unichain, Vercel]
+tech_tags: [Solidity, Foundry, Uniswap v4, AI Agents, Unichain, Vercel]
 ---
 
 <a href="https://github.com/Hijanhv/NeuralHook/tree/main" class="btn btn--inverse btn--large" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>&nbsp;&nbsp;<a href="https://neural-hook.vercel.app/" class="btn btn--primary btn--large" target="_blank"><i class="fas fa-rocket"></i> Live Demo</a>&nbsp;&nbsp;<a href="https://ethglobal.com/showcase/neuralhook-8gxzp" class="btn btn--warning btn--large" target="_blank"><i class="fas fa-trophy"></i> ETHGlobal Showcase</a>

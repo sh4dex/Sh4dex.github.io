@@ -6,7 +6,7 @@ image: /images/projects/swappBanner.png
 github: https://github.com/sh4dex/Swapping-App
 collection: portfolio
 badge: "DEFI"
-tech_tags: [Solidity, DEX, Token Swaps, Smart Contracts]
+tech_tags: [Solidity, Foundry, DEX, Token Swaps, Smart Contracts]
 ---
 
 <a href="https://github.com/sh4dex/Swapping-App" class="btn btn--inverse btn--large" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
