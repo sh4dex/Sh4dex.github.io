@@ -27,6 +27,22 @@
   }
 }
 
+/* When using simple profile sidebar, expand archive and reduce sidebar width */
+#main.main--simple-profile {
+  @include breakpoint($large) {
+    .sidebar {
+      @include span(1.2 of 12);
+      max-width: 160px;
+      padding-right: 20px;
+    }
+
+    .archive {
+      @include span(10.8 of 12 last);
+      @include prefix(0.2 of 12);
+    }
+  }
+}
+
 .archive__subtitle {
   margin: 1.414em 0 0;
   padding-bottom: 0.5em;
