@@ -13,13 +13,9 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
-  {% if page.portfolio_simple_profile %}
-    <div class="sidebar-simple">
-      {% include author-profile-simple.html %}
-    </div>
-  {% else %}
+  {% unless page.author_profile == false %}
     {% include sidebar.html %}
-  {% endif %}
+  {% endunless %}
 
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
