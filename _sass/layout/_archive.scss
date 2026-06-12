@@ -27,19 +27,31 @@
   }
 }
 
-/* When using simple profile sidebar, expand archive and reduce sidebar width */
-#main.main--simple-profile {
-  @include breakpoint($large) {
-    .sidebar {
-      @include span(1.2 of 12);
-      max-width: 160px;
-      padding-right: 20px;
-    }
+/* Simple sidebar for portfolio - no sidebar columns, full width archive */
+.sidebar-simple {
+  margin-bottom: 2em;
 
-    .archive {
-      @include span(10.8 of 12 last);
-      @include prefix(0.2 of 12);
+  @include breakpoint($large) {
+    @include span(12 of 12);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(245,245,246, 0.15);
+  }
+
+  .author-profile-simple {
+    @include breakpoint($large) {
+      min-width: auto;
     }
+  }
+}
+
+/* Adjust archive to full width when using simple sidebar */
+#main > .sidebar-simple + .archive {
+  @include breakpoint($large) {
+    @include span(12 of 12);
+    @include prefix(0);
   }
 }
 

@@ -33,12 +33,6 @@
     &:hover {
       opacity: 1;
     }
-
-    /* Simplified profile sidebar for portfolio */
-    &.sticky .author-profile-simple {
-      max-width: 180px;
-      margin: 0 auto;
-    }
   }
 
   @include breakpoint($x-large) {
