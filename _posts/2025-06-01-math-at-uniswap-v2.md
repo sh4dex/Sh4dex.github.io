@@ -2,9 +2,6 @@
 title: "Math at Uniswap V2"
 date: 2025-06-01
 excerpt: "How a single equation — x·y = k — powers a decentralised exchange. Step-by-step derivation of the output formula Δy, with and without the 0.3 % fee."
-header:
-  image: blog/xy.png
-  teaser: blog/xy.png
 categories:
   - DeFi
 tags:
@@ -18,6 +15,8 @@ Uniswap V2 is one of the most studied smart contracts ever deployed. At its core
 $$x \cdot y = k$$
 
 No order book. No matching engine. Just two token reserves and a constant. This post unpacks exactly how that formula translates into the tokens you receive when you make a swap.
+
+![x · y = k](/images/blog/xy.png)
 
 ---
 
