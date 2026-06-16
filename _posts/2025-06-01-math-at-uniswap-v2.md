@@ -3,16 +3,13 @@ title: "Math at Uniswap V2"
 date: 2025-06-01
 excerpt: "How a single equation — x·y = k — powers a decentralised exchange. Step-by-step derivation of the output formula Δy, with and without the 0.3 % fee."
 header:
-  image: /images/blog/xy.png
-  teaser: /images/blog/xy.png
+  image: blog/xy.png
+  teaser: blog/xy.png
 categories:
   - DeFi
 tags:
-  - Uniswap
   - AMM
   - DeFi
-  - Math
-  - Solidity
 author_profile: true
 ---
 
