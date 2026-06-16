@@ -39,7 +39,7 @@ Uniswap V2's pool has four actors:
 
 The heart of Uniswap V2 is the **constant product formula**:
 
-<div style="border: 2px solid #e91e8c; border-radius: 8px; background: #f8f0f5; padding: 1.2em 1.6em; margin: 1.2em 0;">
+<div style="border: 2px solid #e91e8c; border-radius: 8px; background: #f8f0f5; padding: 1.2em 1.6em; margin: 1.2em 0; color: #000;">
 
 $$x \cdot y = k$$
 
