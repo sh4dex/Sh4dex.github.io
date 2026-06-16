@@ -44,7 +44,7 @@ author_profile: false
   var cards     = Array.from(grid.querySelectorAll('.pf-card'));
 
   /* ── build tag map from data-tags ── */
-  var tagMap = {}; // tag → count
+  var tagMap = {};
   cards.forEach(function(c) {
     var tags = (c.dataset.tags || '').split(',').map(function(t){ return t.trim(); }).filter(Boolean);
     tags.forEach(function(t) {
