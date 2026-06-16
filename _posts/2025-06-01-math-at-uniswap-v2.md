@@ -40,15 +40,13 @@ Uniswap V2's pool has four actors:
 The heart of Uniswap V2 is the **constant product formula**:
 
 <div style="border: 2px solid #e91e8c; border-radius: 8px; background: #f8f0f5; padding: 1.2em 1.6em; margin: 1.2em 0; color: #000;">
-
-$$x \cdot y = k$$
-
-where:
-
-- $x$ = reserve of token X in the pool
-- $y$ = reserve of token Y in the pool
-- $k$ = constant (remains the same before and after the swap, ignoring fees)
-
+  <p style="text-align:center; color:#000;">$$x \cdot y = k$$</p>
+  <p style="color:#000;">where:</p>
+  <ul style="color:#000;">
+    <li>\(x\) = reserve of token X in the pool</li>
+    <li>\(y\) = reserve of token Y in the pool</li>
+    <li>\(k\) = constant (remains the same before and after the swap, ignoring fees)</li>
+  </ul>
 </div>
 
 $k$ must hold before and after every swap (ignoring fees for now).
