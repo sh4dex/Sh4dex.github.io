@@ -24,7 +24,7 @@ Staking App is a decentralized staking protocol that enables users to deposit to
 
 ## Architecture
 
-![Staking App Architecture](/images/projects/stakingApp.png)
+![Staking App Architecture](/images/projects/stakingApp.webp)
 
 ## Staking Flow
 

@@ -12,7 +12,8 @@
   <a href="{{ base_path }}{{ post.url }}" class="pf-card__shot-link" aria-label="{{ post.title }}">
     <div class="pf-card__shot">
       {% if post.image %}
-        <img class="pf-card__img" src="{{ post.image | prepend: base_path }}" alt="{{ post.title }}" />
+        {% capture webp_path %}{{ post.image | replace: '.png', '.webp' | prepend: base_path }}{% endcapture %}
+        <img class="pf-card__img" src="{{ webp_path }}" alt="{{ post.title }}" loading="lazy" />
       {% endif %}
       <div class="pf-card__glow"></div>
       {% if post.badge %}

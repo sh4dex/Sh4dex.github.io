@@ -19,7 +19,7 @@ Built using **Foundry** as part of a Solidity security and smart contract develo
 
 ## Architecture
 
-![CryptoBank Contract Architecture](/images/projects/CryptoBank.sol.png)
+![CryptoBank Contract Architecture](/images/projects/CryptoBank.sol.webp)
 
 ## Functions
 

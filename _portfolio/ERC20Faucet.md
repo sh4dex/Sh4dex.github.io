@@ -28,7 +28,7 @@ Deployment script: `script/DeployTHXToken.s.sol`
 
 ## claim() Execution Flow
 
-![Execution Flow](/images/projects/executionFlow.png)
+![Execution Flow](/images/projects/executionFlow.webp)
 
 1. Check `block.timestamp - _lastClaim ≥ cooldown`
 2. Check `balanceOf(this) ≥ _dripAmount`

@@ -24,7 +24,7 @@ Swapping App is a decentralized token swapping application built on blockchain t
 
 ## Architecture
 
-![Swapping App Architecture](/images/projects/swappBanner.png)
+![Swapping App Architecture](/images/projects/swappBanner.webp)
 
 ## Token Exchange Flow
 

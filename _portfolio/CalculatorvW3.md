@@ -21,7 +21,7 @@ This project was built using the **Foundry** smart contract development framewor
 
 Created using **Solidity version 0.8.33**
 
-![CalculatorWeb3](/images/projects/calculator.png)
+![CalculatorWeb3](/images/projects/calculator.webp)
 
 ## Operations
 

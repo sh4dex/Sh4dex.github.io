@@ -19,7 +19,7 @@ Built using **Foundry** with **Solidity 0.8.34**, leveraging OpenZeppelin's ERC-
 
 ## Architecture
 
-![NFT-Collection Contract Architecture](/images/projects/nft-collection-cover.png)
+![NFT-Collection Contract Architecture](/images/projects/nft-collection-cover.webp)
 
 ## Functions
 
