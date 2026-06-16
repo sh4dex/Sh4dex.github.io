@@ -37,11 +37,21 @@ Uniswap V2's pool has four actors:
 
 ## The constant product formula
 
-The invariant that governs every swap is:
+The heart of Uniswap V2 is the **constant product formula**:
+
+<div style="border: 2px solid #e91e8c; border-radius: 8px; background: #f8f0f5; padding: 1.2em 1.6em; margin: 1.2em 0;">
 
 $$x \cdot y = k$$
 
-where $x$ is the reserve of token X, $y$ is the reserve of token Y, and $k$ is a constant that must hold before and after every swap (ignoring fees for now).
+where:
+
+- $x$ = reserve of token X in the pool
+- $y$ = reserve of token Y in the pool
+- $k$ = constant (remains the same before and after the swap, ignoring fees)
+
+</div>
+
+$k$ must hold before and after every swap (ignoring fees for now).
 
 The curve $x \cdot y = k$ is a **hyperbola**. The spot price of X in terms of Y is the negative slope of the curve at any given point — so price changes continuously as reserves move.
 
