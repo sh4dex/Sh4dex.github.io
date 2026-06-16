@@ -23,8 +23,8 @@ main:
   - title: "Achievements"
     url: /achievements/
 
-  # - title: "Blog Posts"
-  #   url: /year-archive/
+  - title: "Blog"
+    url: /year-archive/
 
   # - title: "CV"
   #   url: /cv/
