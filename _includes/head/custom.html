@@ -22,9 +22,11 @@
 <!-- MathJax for LaTeX math rendering -->
 <script>
   MathJax = {
+    loader: {load: ['[tex]/cancel']},
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      packages: {'[+]': ['cancel']}
     }
   };
 </script>
